@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+@theme {
+  /* Font */
+  --font-jakarta: var(--font-plus-jakarta);
+
+  /* Brand Colors — Primary */
+  --color-navy: #1c2b4a;
+  --color-charcoal: #2a2a2a;
+  --color-steel: #2e6ebf;
+
+  /* Brand Colors — Accent */
+  --color-gold: #c8922a;
+  --color-gold-dark: #a97a22;
+
+  /* Brand Colors — Neutrals */
+  --color-white: #ffffff;
+  --color-light-grey: #f2f4f7;
+  --color-mid-grey: #6b7280;
+  --color-border-grey: #e5e7eb;
+  --color-footer: #0f1b2e;
+
+  /* Animations */
+  --animate-marquee: marquee 35s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.banner-slide-left {
+  animation: slideInLeft 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.banner-slide-right {
+  animation: slideInRight 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.banner-slide-up {
+  animation: slideInUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.banner-slide-down {
+  animation: slideInDown 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.banner-delay-1 { animation-delay: 0.05s; }
+.banner-delay-2 { animation-delay: 0.18s; }
+.banner-delay-3 { animation-delay: 0.32s; }
+
+/* Hero page-load animation */
+.hero-fade-up {
+  animation: slideInUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero-delay-1 { animation-delay: 0.1s; }
+.hero-delay-2 { animation-delay: 0.25s; }
+.hero-delay-3 { animation-delay: 0.4s; }
+.hero-delay-4 { animation-delay: 0.55s; }
+.hero-delay-5 { animation-delay: 0.7s; }
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Base resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: #2a2a2a;
+  font-family: var(--font-plus-jakarta), sans-serif;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+h1,
+h2 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+h3,
+h4 {
+  font-weight: 600;
+  line-height: 1.3;
+}
